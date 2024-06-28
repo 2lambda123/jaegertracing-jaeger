@@ -7,6 +7,9 @@ import (
 	"context"
 	"io"
 
+	"go.opentelemetry.io/collector/pdata/ptrace"
+
+	"github.com/jaegertracing/jaeger/plugin/storage/clickhouse"
 	storage_v1 "github.com/jaegertracing/jaeger/storage"
 	"github.com/jaegertracing/jaeger/storage_v2/spanstore"
 )
@@ -24,6 +27,15 @@ func NewFactory(ss storage_v1.Factory) spanstore.Factory {
 // Initialize implements spanstore.Factory.
 func (*Factory) Initialize(_ context.Context) error {
 	panic("not implemented")
+}
+
+func (f *Factory) ChExportSpans(ctx context.Context, td ptrace.Traces) error {
+	switch t := f.ss.(type) {
+	case *clickhouse.Factory:
+		return t.ChExportSpans(ctx, td)
+	}
+
+	return nil
 }
 
 // Close implements spanstore.Factory.
