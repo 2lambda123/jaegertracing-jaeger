@@ -121,7 +121,7 @@ require (
 	github.com/cenkalti/backoff/v5 v5.0.2 // indirect
 	github.com/dgraph-io/ristretto/v2 v2.1.0 // indirect
 	github.com/ebitengine/purego v0.8.2 // indirect
-	github.com/expr-lang/expr v1.17.0 // indirect
+	github.com/expr-lang/expr v1.17.1 // indirect
 	github.com/jaegertracing/jaeger-idl v0.5.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/core/xidutils v0.122.0 // indirect
 	github.com/open-telemetry/opentelemetry-collector-contrib/pkg/status v0.122.0 // indirect
