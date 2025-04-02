@@ -1,11 +1,12 @@
 module github.com/jaegertracing/jaeger/internal/tools
 
 go 1.23.0
-toolchain go1.24.0
+
+toolchain go1.24.1
 
 require (
 	github.com/golangci/golangci-lint v1.64.7
-	github.com/josephspurrier/goversioninfo v1.4.1
+	github.com/josephspurrier/goversioninfo v1.5.0
 	github.com/vektra/mockery/v2 v2.53.2
 	mvdan.cc/gofumpt v0.7.0
 )
